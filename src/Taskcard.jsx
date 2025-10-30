@@ -15,7 +15,7 @@ export default function TaskCard({ task, columnId, index, onEdit, onDelete }) {
   }
 
   function handleDragEnd() {
-    // nothing needed here for now
+  
   }
 
   return (

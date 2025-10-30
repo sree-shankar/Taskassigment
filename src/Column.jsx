@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import TaskCard from "./TaskCard";
 import TaskModal from "./TaskModal";
 
-/**
- * Column handles:
- *  - rendering tasks
- *  - dropping tasks from other columns
- *  - local add/edit/delete via modal
- */
+
 export default function Column({
   column,
   deleteColumn,
@@ -23,7 +18,7 @@ export default function Column({
   const [editingTask, setEditingTask] = useState(null);
   const [dragOver, setDragOver] = useState(false);
 
-  // drag & drop events
+
   function handleDragOver(e) {
     e.preventDefault();
     setDragOver(true);
@@ -43,7 +38,7 @@ export default function Column({
         moveTask({ fromColumnId: payload.fromColumnId, toColumnId: column.id, taskId: payload.taskId });
       }
     } catch (err) {
-      // ignore
+  
     }
   }
 

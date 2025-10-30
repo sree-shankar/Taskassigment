@@ -54,7 +54,7 @@ export default function Board({ board, setBoard }) {
     });
   }
 
-  // helpers for Column to add/edit/delete task in place
+
   function addTaskToColumn(columnId, task) {
     const newTask = { ...task, id: "task-" + Date.now().toString() };
     updateColumn(columnId, { tasks: [...(board.columns.find(c => c.id === columnId)?.tasks || []), newTask] });
